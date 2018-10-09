@@ -7,7 +7,7 @@
  *  Adapted from:
  *  Shuffler macro by Christophe Leterrier v1.0 26/06/08
  *  Modified by Chris Gell 07/09/2018 Adapted from https://github.com/quantixed/imagej-macros/blob/master/Blind_Analysis.ijm
- *  Only works with .tif files and only parses subfolders of the selected folder. All subfolders must have a tif in them.
+ *  Only works with .tiff files and only parses subfolders of the selected folder. All subfolders must have a tiff in them.
 */
 
 macro "Blind Analysis" {
@@ -70,7 +70,7 @@ function processSubs() {
 
 	// How many TIFFs do we have? Directory could contain other directories.
 	for (i=0; i<ALL_NAMES.length; i++) {
- 		if (indexOf(toLowerCase(ALL_NAMES[i]), ".tif")>0) {
+ 		if (indexOf(toLowerCase(ALL_NAMES[i]), ".tiff")>0) {
  			IM_NUMBER=IM_NUMBER+1;
  		}
  	}
@@ -80,7 +80,7 @@ function processSubs() {
 	// Test all files for extension
 	j=0;
 	for (i=0; i<ALL_NAMES.length; i++) {
-		if (indexOf(toLowerCase(ALL_NAMES[i]), ".tif")>0) {
+		if (indexOf(toLowerCase(ALL_NAMES[i]), ".tiff")>0) {
 			IM_NAMES[j]=ALL_NAMES[i];
 			j=j+1;
 		}
